@@ -1,15 +1,24 @@
 import React from "react";
 import "./App.css";
+// import axios from 'axios';
+import Card from "./Card";
+import styled from 'styled-components';
+
+const AppWrapper = styled.div` 
+  background-color: #C3C0C0;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
 
 function App() {
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
-    </div>
+    <AppWrapper className='app'>
+      <Card />
+    </AppWrapper>
   );
-}
+};
 
 export default App;
