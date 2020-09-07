@@ -38,12 +38,12 @@ const PhotoContainer = styled.div`
 function Card() {
     const [nasaData, setNasaData] = useState([]);
     useEffect(() => {
-        axios.get('https://api.nasa.gov/planetary/apod?api_key=sYuUG0LclwUSXORXXGAjgbRG6Ls7iZ8q8buyFEyT')
+        axios.get('https://api.nasa.gov/planetary/apod?api_key=O3Q7QyY1RsCYKsCShn6PGZm4ScaPilj8MvYoxSsN')
             .then(response => {
                 console.log('response from Card', response);
                 setNasaData(response.data);
             })
-            .catch(error => console.log('you goofed', error));
+            .catch(error => alert('sorry, the NASA API seems to be down, try again later!'));
     }, []);
 
         return (
